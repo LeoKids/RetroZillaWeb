@@ -7,31 +7,171 @@
 		.red {
 			color: red;
 		}
+		#dlLinksCont {
+			text-align: center;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.center {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	</style>
 </head>
 <body>
-	<h1>RetroZilla Update</h1>
+	<table id="updateTable" class="center">
+		<tr>
+			<td>
+				<img src="logo.png">
+			</td>
+			<td>
+				<h1>RetroZilla Update</h1>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h3 id="dlLinksCont">
+					<a href="http://www.example.com/">Download Windows Installer</a>
+					 - 
+					<a href="http://www.example.com/">Download Zip Archive</a>
+				</h3>
+			</td>
+		</tr>
+	</table>
+	<!-- current release changelog -->
+	<h1 class="center">RetroZilla 2.3</h1>
+		<h3>New Features</h3>
+		<ul>
+			<li>Updated certificate store</li>
+			<li>Updated NSS with TLS 1.3 support</li>
+			<li>Updated various internal libraries</li>
+			<li>Added about:debug page with links and information for RetroZilla developers</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>Website certified by an unknown authority dialog</li>
+			<li>Gecko build version in user agent string is updated to reflect modern conventions</li>
+			<li>Long-standing installer creation bug fixed</li>
+		</ul>
+		<h3>Release Notes</h3>
+		<p>
+			This build was released primarily to bring TLS 1.3 support to users as well as fix the annoying
+			root certificate problem.
+		</p>
+	<!-- donation section -->
 	
-	<img src="ss.png">
-	
-	<p>
-		RetroZilla is my fork of Gecko 1.8.1 for improved compatibility 
-		on the modern web, with Windows 95 and Windows NT 4.0 in mind. 
-		Right now, RetroZilla's rendering capabilities are pretty similar 
-		to Firefox 2.0's, but as RetroZilla progresses, so will its capabilities.
-	</p>
-	<p>
-		Right now, I am focusing on RetroZilla Suite, a build of SeaMonkey/Mozilla Suite, 
-		because the suite provides both a browser and an email client in one package, 
-		along with other utilities. As RetroZilla progresses, I may also provide builds 
-		of Firefox and Thunderbird. The Firefox code is already in the tree, and if there's 
-		popular demand, I will copy over the Thunderbird code for personal builds.
-	</p>
-	<p>
-		I currently do my builds on Windows 2000 SP4 with Visual Studio 6.0 and MozillaBuild 1.2. 
-		The builds will also most likely work on Windows XP/2003, and possibly Vista and above, 
-		but don't take my word on it.
-	</p>
+	<!-- past release changelog: -->	
+	<h1 class="center">Past Releases</h1>
+		<!-- past releases -->
+		<h2>RetroZilla 2.2</h2>
+		<h3>New Features</h3>
+		<ul>
+			<li>Updated NSS with TLS 1.2 support</li>
+			<li>Various internal URLs have been updated to reflect current RetroZilla website</li>
+			<li>Various security fixes</li>
+			<li>Various build system changes</li>
+			<li>RetroZilla Browser (Firefox) code added</li>
+			<li>Non-standard ports of gopher can now be accessed by toggling network.gopher.port-restricted in about:config</li>
+			<li>Typing search queries directly in the URLbar now supported</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>Website certified by an unknown authority dialog</li>
+		</ul>
+		<h3>Release Notes</h3>
+		<p>
+			This build was released primarily to bring TLS 1.2 support to users as well as fix the annoying
+			root certificate problem.
+		</p>
+		<hr>
+		<h2>RetroZilla 2.1</h2>
+		<h3>New Features</h3>
+		<ul>
+			<li>Updated default tab and security preferences</li>
+			<li>Disabled sidebar opening by default when searching from address bar </li>
+			<li>Added StartPage search engine</li>
+			<li>&quot;? &lt;query&gt;&quot; from the urlbar initiates a Google Search</li>
+			<li>&quot;?sp &lt;query&gt;&quot; from the urlbar initiates a StartPage Search</li>
+			<li>RetroZilla Home checks to see if a newer build is available</li>
+			<li>Various internal URLs have been updated to reflect current RetroZilla website</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>Copyright date on about:home updates dynamically.</li>
+		</ul>
+		<h3>Release Notes</h3>
+		<p>
+			Due to the long gap between the time RetroZilla was last worked on and now,
+			We decided to release one last minor update before the work on Gecko begins.
+			The new address bar search keywords may not work unless you have a new profile 
+			created after the release of RetroZilla 2.1. We also added an update notifier 
+			on the RetroZilla home page (about:home) to notify users that don't follow the 
+			MSFN threads that a new version is out.
+		</p>
+		<!-- -->
+		<hr>
+		<h2>RetroZilla 2.0</h2>
+		<h3>New Features</h3>
+		<ul>
+			<li>New Home Page: about:home.</li>
+			<li>about:changelog.</li>
+			<li>Session Manager and Crash Restore system</li>
+			<li>Updated internal URLs to reflect new website</li>
+			<li>Added Get Extensions link to Tools menu and Contribute link to Help menu</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>More &quot;M&quot; logos replaced.</li>
+		</ul>
+		<h3>Release Notes</h3>
+		<p>
+			This should be our last major features-only and rebrand release. Starting with 3.0, we will upgrade
+			the Gecko core to be more compliant for the modern web. We would like to thank the developers of the
+			Crash Recovery and Session Manager extensions for a platform to build on for our new Session Restore
+			feature. Users who already have any these extensions installed are advised to remove them.
+		</p>
+		<!-- -->
+		<hr>
+		<h2>RetroZilla 1.1</h2>
+		<h3>New Features</h3>
+		<ul>
+			<li>The rebrand from SeaMonkey to RetroZilla was finished.</li>
+			<li>New throbber with the Mozilla &quot;M&quot; logo changed to &quot;RZ&quot; for RetroZilla.</li>
+			<li>Windows 9x and NT 4 now display a proper OS string in the user agent.</li>
+			<li>RetroZilla now has its own profile folder inside of the application data directory. Old Mozilla Suite/SeaMonkey
+			    1.x profiles will no longer work.</li>
+			<li>New about:credits page featuring both RetroZilla and Mozilla contributors.</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>A slight bug causing some elements to not display properly was fixed.</li>
+			<li>Installer works properly on Windows NT.</li>
+		</ul>
+		<h3>Release Notes</h3>
+		<p>
+			Our plan for the future is to ship UX-enhancing features in 2.0, and then start backporting CSS changes in
+			3.0, so the RetroZilla version numbers will match the Firefox version number that has CSS parity with RetroZilla.
+		</p>
+		<!-- -->
+		<h2>RetroZilla 1.0</h2>
+		<h3>New Features</h3>
+		<ul>
+			<li>Support for some HTML5 elements was added.</li>
+		</ul>
+		<h3>Bug Fixes</h3>
+		<ul>
+			<li>A HTTPS bug was fixed</li>
+		</ul>
+		<h3>Release Notes</h3>
+		<p>
+			This is the first release of RetroZilla, mostly just a rebrand of SeaMonkey 1.1.19. (Firefox 2.0.0.2)
+		</p>
+	<!--
+===========================================================================
+-->
+	<hr>
 	<p class="red">
 		<strong>WARNING:</strong> RetroZilla is NOT a secure browser, and is provided for entertainment 
 		purposes only. It is a build of a browser from 2007, and contains most security vulnerabilities 
@@ -39,7 +179,8 @@
 		shopping. The RetroZilla development team is not responsible for any stolen information or malware 
 		obtained while using our product. <strong>USE AT YOUR OWN RISK</strong>.
 	</p>
-	<h3><a href="https://github.com/rn10950/RetroZilla">RetroZilla Source</a></h3>
-	<h3><a href="https://github.com/rn10950/RetroZilla/releases/latest">RetroZilla Latest Release</a></h3>
+	<h3><a href="https://github.com/rn10950/RetroZilla">RetroZilla Source Tarball</a></h3>
+	<h3><a href="https://github.com/rn10950/RetroZilla">RetroZilla Source GitHub</a></h3>
+	<h3><a href="https://github.com/rn10950/RetroZilla/releases/latest">RetroZilla Latest Release - GitHub</a></h3>
 </body>
 </html>
