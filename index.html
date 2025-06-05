@@ -7,12 +7,24 @@
 		.red {
 			color: red;
 		}
+		.center {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	</style>
 </head>
 <body>
-	<h1>RetroZilla</h1>
-	
-	<img src="ss.png">
+	<table class="center">
+		<tr>
+			<td>
+				<img src="logo.png">
+			</td>
+			<td>
+				<h1>RetroZilla</h1>
+			</td>
+		</tr>
+	</table>
 	
 	<p>
 		RetroZilla is my fork of Gecko 1.8.1 for improved compatibility 
@@ -27,11 +39,69 @@
 		of Firefox and Thunderbird. The Firefox code is already in the tree, and if there's 
 		popular demand, I will copy over the Thunderbird code for personal builds.
 	</p>
+	<h2>Supported Operating Systems:</h2>
+	<ul>
+		<li>Windows 95</li>
+		<li>Windows 98</li>
+		<li>Windows ME</li>
+		<li>Windows NT 4.0</li>
+		<li>Windows NT 3.51 *</li>
+		<li>Windows 2000/XP/Vista/7/8.x/10/11 **</li>
+	</ul>
 	<p>
-		I currently do my builds on Windows 2000 SP4 with Visual Studio 6.0 and MozillaBuild 1.2. 
-		The builds will also most likely work on Windows XP/2003, and possibly Vista and above, 
-		but don't take my word on it.
+		* - Please read NT 3.51 section below.
 	</p>
+	<p>
+		** - RetroZilla will run on modern versions of Windows, however it is not 
+		     extensively tested on anything beyond Windows 2000 and XP. RetroZilla should 
+		     install on 64-bit Windows as normal using WoW64, however a 64-bit native 
+		     version will not be officially built. Bugs exclusively found on modern 
+		     Windows versions will be considered very low priority.
+	</p>
+	<h2>Installing RetroZilla</h2>
+	<h3>GUI Installer</h3>
+	<p>
+		The GUI instaler will guide you through the installation process, giving you 
+		a choice of where and what to install.
+		<BR>
+		<a href="#">Download GUI Installer</a>
+	</p>
+	<h3>ZIP Archive</h3>
+	<p>
+		RetroZilla binary files in a zip archive for advanced users.
+		<BR>
+		<a href="#">Download ZIP Archive</a>
+	</p>
+	<h2>Windows NT 3.51</h2>
+	<p>
+		The RetroZilla GUI installer does not work on Windows NT 3.51, you must use the 
+		ZIP archive. Extract the archive to a location of your choosing and run retrozilla.exe.
+		The following additional components must be installed on your system:
+	</p>
+	<ul>
+		<li>
+			msvcrt.dll must be present in your PATH variable
+		</li>
+		<li>
+			oleaut32.dll in your system32 directory must be version 2.40.4275 or above. If you 
+			have an older version, you can install <br>
+			<a href="http://web.archive.org/web/20140128012502if_/http://floppy.haveaday.net/Windows/WinUpdates/98/FE/diskette/Prerequisites/SPEU20.exe">Microsoft Libraries Update Version 2</a>
+		</li>
+	</ul>
+	<p>
+		After verifing the above components installed, please reboot your PC. RetroZilla should 
+		then be able to run from the extracted directory. Profiles are created under %WINDIR%\RetroZilla.
+	</p>
+	<h2>Add-Ons</h2>
+	<p>
+		RetroZilla is compatible with add-ons for SeaMonkey 1.19. Eventually, RetroZilla-specific 
+		add-ons will be created and posted on this website. RetroZilla supports NPAPI plugins.
+	</p>
+	<h2>Screenshot</h2>
+	<img src="ss.png">
+	
+	
+	<hr>
 	<p class="red">
 		<strong>WARNING:</strong> RetroZilla is NOT a secure browser, and is provided for entertainment 
 		purposes only. It is a build of a browser from 2007, and contains most security vulnerabilities 
@@ -39,7 +109,8 @@
 		shopping. The RetroZilla development team is not responsible for any stolen information or malware 
 		obtained while using our product. <strong>USE AT YOUR OWN RISK</strong>.
 	</p>
-	<h3><a href="https://github.com/rn10950/RetroZilla">RetroZilla Source</a></h3>
-	<h3><a href="https://github.com/rn10950/RetroZilla/releases/latest">RetroZilla Latest Release</a></h3>
+	<h3><a href="https://github.com/rn10950/RetroZilla">RetroZilla Source Tarball</a></h3>
+	<h3><a href="https://github.com/rn10950/RetroZilla">RetroZilla Source GitHub</a></h3>
+	<h3><a href="https://github.com/rn10950/RetroZilla/releases/latest">RetroZilla Latest Release - GitHub</a></h3>
 </body>
 </html>
