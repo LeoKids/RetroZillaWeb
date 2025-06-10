@@ -12,6 +12,21 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		#donation-box {
+			background-color: green;	
+			margin: 30px;
+			padding: 5px;
+			color: gold;
+			font-family: sans-serif;
+			border: 3px outset gray;
+		}
+		#donation-box > p {
+			padding-left: 25px;
+		}
+		#donLink:link { color: gold; }
+		#donLink:visited { color: gold; }
+		#donLink:hover { color: white; }
+		#donLink:active { color: silver; }
 	</style>
 </head>
 <body>
@@ -99,6 +114,15 @@
 	</p>
 	<h2>Screenshot</h2>
 	<img src="ss.png">
+	
+	<!-- donation section -->
+	<div id="donation-box">
+		<h2 class="center">Donate to RetroZilla</h2>
+		<p>
+			If you enjoy using RetroZilla and would like to give me a tip, 
+			you can do so at <a href="donate.html" target="_blank" id="donLink">Donate to RetroZilla</a>
+		</p>
+	</div>
 	
 	
 	<hr>
